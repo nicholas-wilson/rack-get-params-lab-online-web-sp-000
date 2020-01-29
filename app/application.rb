@@ -20,10 +20,10 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      item = req.params["item"]
-      if @@items.include?(item)
-        @@cart << item
-        "added #{item}"
+      thing = req.params["item"]
+      if @@items.include?(thing)
+        @@cart << thing
+        "added #{thing}"
       else
         "ERROR: Item not found."
       end
