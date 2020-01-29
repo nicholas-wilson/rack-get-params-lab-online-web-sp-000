@@ -23,6 +23,7 @@ class Application
       item = req.params["q"]
       if @@items.include?(item)
         @@cart << item
+        "added #{item}"
       else
         "ERROR: Item not found."
       end
